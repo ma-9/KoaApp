@@ -9,7 +9,7 @@ const koa_ejs_1 = __importDefault(require("koa-ejs"));
 const koa_bodyparser_1 = __importDefault(require("koa-bodyparser"));
 const path_1 = __importDefault(require("path"));
 const app = new koa_1.default();
-const port = 5000;
+const port = 5000 || process.env.PORT;
 koa_ejs_1.default(app, {
     root: path_1.default.join(__dirname, 'views'),
     layout: 'layouts',
